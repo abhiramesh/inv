@@ -1,4 +1,23 @@
 Investing::Application.routes.draw do
+  resources :ideas
+
+
+  devise_for :users, :skip => [:sessions] 
+    as :user do
+      get 'join' => 'devise/registrations#new', :as => :new_user_registration
+      post 'join' => 'devise/registrations#create', :as => :user_registration
+      get 'login' => 'devise/sessions#new', :as => :new_user_session
+      post 'login' => 'devise/sessions#create', :as => :user_session
+      get 'logout' => 'devise/sessions#destroy', :as => :destroy_user_session
+      delete 'logout' => 'devise/sessions#destroy', :as => :destroy_user_session
+    end
+
+  resources :users
+
+  root :to => 'static_pages#home'
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
