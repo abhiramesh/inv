@@ -43,27 +43,34 @@ button.navbar-toggle {
 }
 
 input[type="submit"] {
-	border-radius: 3px;
-	background: orange;
-	padding: 15px 20px;
-	margin: 10px 0px;
-	max-width: 350px;
-	color: white;
-	font-size: 18px;
-	text-align: center;
-	cursor: pointer;
-	border: none;
+	  border-radius: 2px;
+	  background: orange;
+	  padding: 10px 30px;
+	  margin: 10px 0px;
+	  max-width: 350px;
+	  color: white;
+	  font-size: 15px;
+	  text-align: center;
+	  cursor: pointer;
+	  border: none;
 }
 
 input[type="email"], input[type="text"], input[type="password"] {
 	border: solid 1px #CCC;
 	height: 45px;
-	border-radius: 3px;
+	border-radius: 2px;
 	margin: 0px 0px 15px 0px;
 	max-width: 250px;
 	width: 90%;
 	padding-left: 10px;
 	color: black;
+}
+
+textarea {
+	padding: 10px;
+	border: solid 1px #CCC;
+	border-radius: 2px;
+	width: 100%;
 }
 
 
@@ -81,23 +88,31 @@ a:hover {
 	background: none !important; 
 }
 
+.close {
+	padding: 5px !important;
+}
+
 .header {
 	font-size: 32px;
 	padding: 25px 0px;
 }
 
+.black {
+	background: black;
+}
+
 .home-title {
 	font-size: 50px;
-	color: black;
+	color: white;
 }
 
 .home-button {
 	border-radius: 3px;
-	background: black;
+	background: white;
 	padding: 15px 20px;
 	width: 90%;
 	max-width: 250px;
-	color: white;
+	color: black;
 	font-size: 18px;
 	text-align: center;
 	cursor: pointer;
@@ -108,8 +123,8 @@ a:hover {
 .home-box {
 	margin-top: 80px;
 	padding: 80px 0px;
-	border-top: solid 2px black;
-	border-bottom: solid 2px black;
+	border-top: solid 2px white;
+	border-bottom: solid 2px white;
 }
 
 .message {

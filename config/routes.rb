@@ -2,10 +2,10 @@ Investing::Application.routes.draw do
   resources :ideas
 
 
-  devise_for :users, :skip => [:sessions] 
+  devise_for :users, :skip => [:sessions], :controllers => {:registrations => "registration"} 
     as :user do
-      get 'join' => 'devise/registrations#new', :as => :new_user_registration
-      post 'join' => 'devise/registrations#create', :as => :user_registration
+      get 'join' => 'registration#new', :as => :new_user_registration
+      post 'join' => 'registration#create', :as => :user_registration
       get 'login' => 'devise/sessions#new', :as => :new_user_session
       post 'login' => 'devise/sessions#create', :as => :user_session
       get 'logout' => 'devise/sessions#destroy', :as => :destroy_user_session

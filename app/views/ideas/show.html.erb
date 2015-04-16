@@ -1,0 +1,13 @@
+<div class="container" align="center">
+	<div class="idea-box">
+		<div class="idea-info">
+			Posted by <%= @idea.user.email %> on <%= @idea.created_at.in_time_zone("Eastern Time (US & Canada)").strftime("%B %d, %Y") %>
+		</div>
+		<div class="idea-title">
+			<%= @idea.title %>
+		</div>
+		<div class="idea-body">
+			<%= @idea.body %>
+		</div>
+	</div>
+</div>

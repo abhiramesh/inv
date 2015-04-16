@@ -1,0 +1,23 @@
+<div class="modal fade" id="newIdeaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <div class="modal-title">Submit a New Idea:</div>
+      </div>
+      <div class="modal-body" align="center">
+      		<%= form_for @idea, :validate => :true do |f| %>
+            <div>
+              <%= f.text_field :title, placeholder: "Idea Title" %>
+            </div>
+            <div>
+              <%= f.text_area :body, placeholder: "Please provide a detailed write-up of your idea here...", :rows => "8"%>
+            </div>
+            <div>
+              <%= f.submit "Submit >>" %>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>

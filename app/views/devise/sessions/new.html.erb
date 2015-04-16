@@ -1,15 +1,15 @@
 <div class="container" align="center">
   <div class="devise-box">
     <div class="header"> Log In </div>
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name), :validate => true) do |f| %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true %>
+        <%= f.email_field :email, :validate => { presence: true }, autofocus: true %>
       </div>
 
       <div class="field">
         <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
+        <%= f.password_field :password, :validate => { presence: true }, autocomplete: "off" %>
       </div>
 
       <% if devise_mapping.rememberable? -%>

@@ -1,0 +1,25 @@
+<div class="container" align="center">
+	<div class="idea-box">
+		<div class="new-idea-button" data-toggle="modal" data-target="#newIdeaModal">
+			Submit a New Idea >>
+		</div>
+	</div>
+	<% @ideas.each do |idea| %>
+		<div class="idea-box">
+			<div class="idea-info">
+				Posted by <%= idea.user.email %> on <%= idea.created_at.in_time_zone("Eastern Time (US & Canada)").strftime("%B %d, %Y") %>
+			</div>
+			<div class="idea-title">
+				<%= idea.title %>
+			</div>
+			<div class="idea-body">
+				<%= idea.body.truncate(850) %>
+			</div>
+			<a class="view-more" href="/ideas/<%=idea.id%>" target="_blank">
+				Click to view full idea >>
+			</a>
+		</div>
+	<% end %>
+</div>
+
+<%= render 'ideas/new_idea_modal' %>

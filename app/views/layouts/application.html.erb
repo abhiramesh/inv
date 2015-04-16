@@ -5,14 +5,35 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
 </head>
 <body>
-
+	<br><br>
+	<% if flash[:error] %>
+      <div class="container" align="center">
+        <div id="error" class="alert alert-danger alert-dismissable"><%= flash[:error] %></div>
+      </div>
+   	<% end %>
+   	<% if flash[:notice] %>
+      <div class="container" align="center">
+        <div id="notice" class="alert alert-warning alert-dismissable"><%= flash[:notice] %></div>
+      </div>
+   	<% end %>
+   	<% if flash[:success] %>
+      <div class="container" align="center">
+        <div id="success" class="alert alert-success alert-dismissable"><%= flash[:success] %></div>
+      </div>
+   	<% end %>
 <%= yield %>
-
+<br><br>
 </body>
 </html>
+
+<script type="text/javascript">
+	$(".alert").fadeTo(5000, 500).slideUp(300, function(){
+	    $(".alert").alert('close');
+	});
+</script>

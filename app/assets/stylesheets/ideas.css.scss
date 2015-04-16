@@ -1,3 +1,59 @@
 // Place all the styles related to the ideas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.idea-box {
+	border: solid 1px #CCC;
+	box-shadow: 1px 1px 1px #EEE;
+	padding: 15px;
+	margin: 10px 0px;
+	color: black;
+	border-radius: 2px;
+	width: 100%;
+	max-width: 900px;
+	text-align: left;
+	overflow: auto;
+}
+
+.idea-title {
+	font-size: 16px;
+	padding: 10px 0px;
+	text-align: left;
+}
+
+.idea-info {
+	font-size: 11px;
+	color: #777;
+	float: right;
+}
+
+.idea-body {
+	margin-top: 20px;
+}
+
+#idea_title {
+	width: 100% !important;
+	max-width: none !important;
+} 
+
+.new-idea-button {
+	border-radius: 2px;
+	background: black;
+	padding: 15px 20px;
+	width: 90%;
+	max-width: 250px;
+	color: white;
+	font-size: 15px;
+	text-align: center;
+	cursor: pointer;
+	border: none;
+	margin-left: auto ;
+  	margin-right: auto ;
+}
+
+.view-more {
+	margin-top: 15px;
+	float: right;
+	cursor: pointer;
+}
